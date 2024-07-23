@@ -1,0 +1,22 @@
+.card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  .card-title {
+    color: #343a40;
+  }
+  
+  .card-text {
+    margin-bottom: 1.5rem;
+  }
+  
+  .list-ordered {
+    margin-left: 1.5rem;
+  }
+  
+  .list-ordered li,
+  ul {
+    margin-bottom: 1rem;
+  }

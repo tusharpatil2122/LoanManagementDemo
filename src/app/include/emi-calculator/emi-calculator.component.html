@@ -1,0 +1,25 @@
+
+<body>
+    <h1>EMI Calculator</h1>
+    <p>Calculating your Car Loan EMI has never been easier. Use our calculator to input your desired amount, interest rate, and tenure, and view an instant summary of your EMI amounts. You can also adjust the amount and tenure to see how it affects your EMI repayments. Get in the driver’s seat faster with our Car Loan EMI Calculator.</p>
+    <div class="container">
+        <form (ngSubmit)="calculateEMI()" #emiForm="ngForm">
+            <div class="form-group">
+                <label for="loanAmount">Loan Amount</label>
+                <input type="number" id="loanAmount" required [(ngModel)]="loanAmount" name="loanAmount" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="interestRate">Annual Interest Rate (%)</label>
+                <input type="number" id="interestRate" required [(ngModel)]="interestRate" name="interestRate" step="0.01" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="loanTenure">Loan Tenure (years)</label>
+                <input type="number" id="loanTenure" required [(ngModel)]="loanTenure" name="loanTenure" class="form-control">
+            </div>
+            <button type="submit" class="btn">Calculate EMI</button>
+        </form>
+        <div class="result" *ngIf="emi">
+            <h2>Monthly EMI: {{ emi }}</h2>
+        </div>
+    </div>
+</body>
