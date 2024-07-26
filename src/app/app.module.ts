@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { VisitorsComponent } from './template/visitors/visitors.component';
-import { UserDashBoardComponent } from './include/user-dash-board/user-dash-board.component';
 import { EnquiryComponent } from './include/enquiry/enquiry.component';
 import { EmiCalculatorComponent } from './include/emi-calculator/emi-calculator.component';
 import { SignInComponent } from './include/sign-in/sign-in.component';
@@ -13,26 +12,29 @@ import { VisitorheaderComponent } from './include/visitorheader/visitorheader.co
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
 import { AboutComponent } from './template/about/about.component';
+import { ErrorComponent } from './include/error/error.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     VisitorsComponent,
-    UserDashBoardComponent,
     EnquiryComponent,
     EmiCalculatorComponent,
     SignInComponent,
     HomeComponent,
     VisitorheaderComponent,
-    AboutComponent
+    AboutComponent,
+    ErrorComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     RouterModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

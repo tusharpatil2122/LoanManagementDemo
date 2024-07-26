@@ -1,0 +1,26 @@
+<form [formGroup]="addEmployeeForm" (ngSubmit)="onSubmit()" class="form-container">
+    <div class="form-group">
+      <label for="empName">Employee Name:</label>
+      <input id="empName" formControlName="empName" class="form-control">
+    </div>
+  
+    <div class="form-group">
+      <label for="username">Username:</label>
+      <input id="username" formControlName="username" type="email" class="form-control">
+    </div>
+  
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input id="password" formControlName="password" type="password" class="form-control">
+    </div>
+  
+    <div class="form-group">
+      <label for="user">User Type:</label>
+      <select id="user" formControlName="user" class="form-control">
+        <option *ngFor="let type of userTypes" [value]="type">{{ type }}</option>
+      </select>
+    </div>
+  
+    <button type="submit" class="btn btn-primary">Add Employee</button>
+  </form>
+  

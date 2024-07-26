@@ -1,0 +1,27 @@
+<div class="employee-container">
+    <h2>Employee List</h2>
+    <table class="employee-table">
+      <thead>
+        <tr>
+          <th>Employee ID</th>
+          <th>Employee Name</th>
+          <th>Username</th>
+          <th>User Type</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of employees">
+          <td>{{ employee.empId }}</td>
+          <td>{{ employee.empName }}</td>
+          <td>{{ employee.username }}</td>
+          <td>{{ employee.user }}</td>
+          <td>
+            <button class="fa fa-pencil btn btn-outline-success" aria-hidden="true" ></button>&nbsp;
+            <button class="fa fa-trash-o btn btn-outline-danger"  aria-hidden="true" ></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
